@@ -445,7 +445,7 @@ bool execute_vrp_moves(solution_t<i_t, f_t, REQUEST>& sol,
     &numBlocksPerSm, execute_vrp_moves_kernel<i_t, f_t, REQUEST>, TPB, 0);
   // if the number of blocks are larger than the gpu can hold, only execute the max fitting moves
   n_blocks =
-    min(n_blocks, sol.sol_handle->get_device_properties().multiProcessorCount * numBlocksPerSm);
+    std::min(n_blocks, sol.sol_handle->get_device_properties().multiProcessorCount * numBlocksPerSm);
   auto sol_view       = sol.view();
   auto move_cand_view = move_candidates.view();
   // launch

@@ -66,7 +66,7 @@ template <typename i_t = int, typename f_t = float>
 __device__ inline i_t lane_id()
 {
   i_t id;
-  asm("mov.s32 %0, %laneid;" : "=r"(id));
+  asm("mov.s32 %0, %%laneid;" : "=r"(id));
   return id;
 }
 

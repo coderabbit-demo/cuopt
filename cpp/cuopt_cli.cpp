@@ -177,7 +177,7 @@ std::string param_name_to_arg_name(const std::string& input)
 int main(int argc, char* argv[])
 {
   // Get the version string from the version_config.hpp file
-  const auto version_string = std::string("cuOpt ") + std::to_string(CUOPT_VERSION_MAJOR) + "." +
+  const std::string version_string = std::string("cuOpt ") + std::to_string(CUOPT_VERSION_MAJOR) + "." +
                               std::to_string(CUOPT_VERSION_MINOR) + "." +
                               std::to_string(CUOPT_VERSION_PATCH);
 
