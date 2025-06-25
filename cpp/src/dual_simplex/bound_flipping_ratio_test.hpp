@@ -62,12 +62,12 @@ class bound_flipping_ratio_test_t {
                   f_t& slope,
                   f_t& step_length,
                   i_t& nonbasic_entering,
-                  i_t& enetering_index);
+                  i_t& entering_index);
   void heap_passes(const std::vector<i_t>& current_indicies,
                    const std::vector<f_t>& current_ratios,
                    i_t num_breakpoints,
                    f_t& slope,
-                   f_t& step_lenght,
+                   f_t& step_length,
                    i_t& nonbasic_entering,
                    i_t& entering_index);
 
